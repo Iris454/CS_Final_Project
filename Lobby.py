@@ -1,7 +1,6 @@
 import Move as m
 import Bag as b
 import Restaurant as r
-from tabulate import tabulate
 
 flag = True
 answer = 0
@@ -16,10 +15,7 @@ def north():
         print("2. check in")
         choice = int(input("choice (1/2): "))
         if choice == 1:
-            print("first floor:")
-            print(tabulate(b.first_floor, tablefmt = "fancy_grid"))
-            print("second floor:")
-            print(tabulate(b.second_floor, tablefmt = "fancy_grid"))
+            b.map()
             break
         elif choice == 2 and len(b.bag) == 0:
             print("Sir, this is your room key. Your room is 103.")
