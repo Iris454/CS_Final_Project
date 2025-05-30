@@ -1,11 +1,16 @@
 import Move as m
+import Elevator as e
+import Pool as p
+import Lobby as l
 
 def north():
-    print("That's the elevator, to go there you have to solve this easy riddle!")
+    print("That way is the elevator.")
+    print("To go into the elevator you have to solve this easy riddle!")
     print("I have keys, but no locks, I have a space, but no room. You can enter, but can't go outside.")
     answer = input("What am I?: ")
     if answer == "keyboard" or "Keyboard": 
         print("Congratulations, you have solved it, very intelligent.")
+        e.elevator()
     else:
         print("No, that is wrong.")
 
@@ -20,11 +25,14 @@ def east():
     answer = input("What is the fourth son's name?: ")
     if answer == "Tim":
         print("Yes, you're clever. Now you can go into the pool.")
+        p.Pool()
     else:
         print("Wrong.")
 
 
 def west():
     print("You're back in the lobby")
+    l.Lobby()
+
 
 dir = [north, south, east, west]
