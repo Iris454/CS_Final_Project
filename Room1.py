@@ -7,7 +7,8 @@ pw = 8
 password = 8*103
 
 def north():
-    pass
+    print("You collect the third key fragment. You are one step closer to escape.")
+    b.bag.append("Key Fragment3")
 
 def south():
     print("You see a locked box. The password is three-digit." \
