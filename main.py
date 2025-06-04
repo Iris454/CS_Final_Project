@@ -5,7 +5,6 @@ descriptions = {"lobby": "",
                         " Each set with folded napkins, polished dishes, and gleaming cutlery, prepared, but untouched." \
                         " A crystal chandelier sways gently in a draft that seems to come from nowhere," \
                         " though not a single window is open. The room is silent, as if time itself  is paused.", 
-                "gym": "", 
                 "elevator": "", 
                 "room1": "", 
                 "room2": ""}

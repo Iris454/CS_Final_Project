@@ -7,7 +7,7 @@ def check():
         print(f"{idx+1}. {bag[idx]}")
 
 first_floor = [[None, "elevator", None], ["lobby", "restuarant", "pool"]]
-second_floor = [["elevator", "Room103", "Room104"], [None, "gym", None]]
+second_floor = [["elevator", "Room103"], [None, "Room104"]]
 
 def map():
     print("first floor:")
