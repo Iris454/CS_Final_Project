@@ -1,6 +1,7 @@
 import Move as m
 import Elevator as e
 import Pool as p
+import Bag as b
 eat = True
 
 def north():
@@ -13,13 +14,14 @@ def north():
             print("Congratulations, you have solved it, very intelligent.")
             eat = False
             e.elevator()
+            break
         else:
             print("No, that is wrong.")
 
 
 def south():
-    print("Sorry there's nothing that way, pick another direction.")
-    pass
+    print("Under a table, you find a purple UV Torch. You collect it.")
+    b.bag.append("UV Torch")
 
 def east():
     while True:
@@ -30,6 +32,7 @@ def east():
             print("Yes, you're clever. Now you can go into the pool.")
             eat = False
             p.Pool()
+            break
         else:
             print("Wrong.")
 
@@ -37,8 +40,8 @@ def east():
 def west():
     print("You've already collected everything from the lobby, you don't need to go that way.")
 
+dir = [north, south, east, west]
+
 def restaurant():
     direction = m.move()
     dir[direction]()
-
-dir = [north, south, east, west]

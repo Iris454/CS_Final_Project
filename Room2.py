@@ -1,4 +1,3 @@
-import Move as m
 import Bag as b
 
 def room2():
@@ -14,6 +13,7 @@ def room2():
                     if b.bag[ans-1] == "UV Torch":
                         print("Using the UV Torch, you see the hidden password: 3421.")
                         print("Hooray, you get the last piece of key fragment! You escape the hotel!")
+                        print("Thank you for playing my game!")
                         break
                     else:
                         print("This item is not useful now. Please pick again.")
