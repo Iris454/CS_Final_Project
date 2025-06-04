@@ -7,7 +7,7 @@ password = "042"
 swim = True
 
 def north():
-    print("There's nothing that way.")
+    print("That way is closed down for construction, don't go there, you might get hurt.")
     pass
 
 def south():
