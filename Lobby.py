@@ -1,6 +1,7 @@
 import Move as m
 import Bag as b
 import Restaurant as r
+import Map as ma
 
 flag = True
 answer = 0
@@ -15,7 +16,7 @@ def north():
         print("2. check in")
         choice = int(input("choice (1/2): "))
         if choice == 1:
-            b.map()
+            ma.map()
             break
         elif choice == 2 and len(b.bag) == 0:
             print("Sir, this is your room key. Your room is 103.")
