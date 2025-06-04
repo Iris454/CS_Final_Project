@@ -1,7 +1,6 @@
 import Move as m
 import Elevator as e
 import Pool as p
-import Lobby as l
 eat = True
 
 def north():
@@ -36,8 +35,7 @@ def east():
 
 
 def west():
-    print("You're back in the lobby")
-    l.Lobby()
+    print("You've already collected everything from the lobby, you don't need to go that way.")
 
 def restaurant():
     direction = m.move()
