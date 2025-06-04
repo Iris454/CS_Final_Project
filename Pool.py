@@ -25,9 +25,8 @@ def south():
         
 
 def east():
-    while True:
-        print("Be carefull, if you go that way you're going to fall in the pool. Get out of here")
-        break
+     print("Be carefull, if you go that way you're going to fall in the pool. Get out of here")
+
 
 def west():
     print("Are you hungry, that way is the restaunt.")
@@ -46,6 +45,7 @@ def west():
         if ans == password:
             swim = False
             r.Restaurant()
+            break
         else:
             print("Wrong password. Please try again.") 
 
