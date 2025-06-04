@@ -3,20 +3,25 @@ import Elevator as e
 import Pool as p
 import Bag as b
 eat = True
+flag = True
 
 def north():
+    global flag
     print("That way is the elevator.")
-    while True:
-        print("To go into the elevator you have to solve this easy riddle!")
-        print("I have keys, but no locks, I have a space, but no room. You can enter, but can't go outside.")
-        answer = input("What am I?: ")
-        if answer == "keyboard" or "Keyboard": 
-            print("Congratulations, you have solved it, very intelligent.")
-            eat = False
-            e.elevator()
-            break
-        else:
-            print("No, that is wrong.")
+    if eat:
+        print("Please visit other places first before leaving the restuarant in elevator.")
+    else:
+        while True:
+            print("To go into the elevator you have to solve this easy riddle!")
+            print("I have keys, but no locks, I have a space, but no room. You can enter, but can't go outside.")
+            answer = input("What am I?: ")
+            if answer == "keyboard" or "Keyboard": 
+                print("Congratulations, you have solved it, very intelligent.")
+                flag = False
+                e.elevator()
+                break
+            else:
+                print("No, that is wrong.")
 
 
 def south():
@@ -24,6 +29,7 @@ def south():
     b.bag.append("UV Torch")
 
 def east():
+    global eat
     while True:
         print("That's the pool, to go there you have to solve this tricky riddle!")
         print("Tim's mom has 4 sons, Red, Orange, and Yellow.")
@@ -43,5 +49,6 @@ def west():
 dir = [north, south, east, west]
 
 def restaurant():
-    direction = m.move()
-    dir[direction]()
+    while flag:
+        direction = m.move()
+        dir[direction]()

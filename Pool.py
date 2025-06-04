@@ -5,6 +5,7 @@ from tabulate import tabulate
 
 password = "042"
 swim = True
+flag = True
 
 def north():
     print("That way is closed down for construction, don't go there, you might get hurt.")
@@ -29,6 +30,7 @@ def east():
 
 
 def west():
+    global flag, swim
     print("Are you hungry, that way is the restaunt.")
     while True:
         print("To enter you have to pass this puzzle.")
@@ -44,6 +46,7 @@ def west():
         ans = input("Password (type three numbers in the correct order without spaces): ")
         if ans == password:
             swim = False
+            flag = False
             r.Restaurant()
             break
         else:
@@ -53,6 +56,7 @@ def west():
 dir = [north, south, east, west]
 
 def pool():
-    direction = m.move()
-    dir[direction]()
+    while flag:
+        direction = m.move()
+        dir[direction]()
     
