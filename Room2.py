@@ -1,34 +1,26 @@
 import Move as m
-from tabulate import tabulate
-password = "042"
-
-def north():
-    pass
-
-def south():
-    pass
-
-def east():
-    print("You see a locked box. The password is three-digit.")
-    print("On a piece of paper next to the box, you see:")
-    grid = [[6, 8, 2, "One number is correct and well placed"],
-            [6, 1, 4, "One number is correct but wrong placed"],
-            [2, 0, 6, "Two numbers are correct but wrong placed"],
-            [7, 3, 8, "Nothing is correct"],
-            [7, 8, 0, "One number is correct but wrong placed"]]
-    print(tabulate(grid, tablefmt = "fancy_grid"))
-
-    ans = input("Password (type three numbers in the correct order without spaces): ")
-    if ans == password:
-        pass
-    else:
-        print("Wrong password. Please try again.") 
-
-def west():
-    pass
-
-dir = [north, south, east, west]
+import Bag as b
 
 def room2():
-    direction = m.move()
-    dir[direction]()
+    print("In this room, you only see a locked box with a four-digit password.")
+    while True:
+        choice = input("What do you do now?: ")
+        if "bag" in choice.lower().split():
+            while True:
+                b.check()
+                print("Which item do you want to use now?")
+                ans = int(input("choose a number: "))
+                if ans > 0 and ans <= len(b.bag):
+                    if b.bag[ans-1] == "UV Torch":
+                        print("Using the UV Torch, you see the hidden password: 3421.")
+                        print("Hooray, you get the last piece of key fragment! You escape the hotel!")
+                        break
+                    else:
+                        print("This item is not useful now. Please pick again.")
+                else:
+                    print("Pleae pick a number labeled in front of the items.")
+            break
+        else:
+            print("Hint: type out the thing that you have along the way.")
+        
+
