@@ -1,4 +1,3 @@
-
 bag = []
 
 def check():

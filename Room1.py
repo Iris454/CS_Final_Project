@@ -5,22 +5,28 @@ from tabulate import tabulate
 answer = 0
 pw = 8
 password = 8*103
+flag = True
 
 def north():
-    print("You collect the third key fragment. You are one step closer to escape.")
-    b.bag.append("Key Fragment3")
+    print("You collect the second key fragment. You are one step closer to escape.")
+    b.bag.append("Key Fragment2")
 
 def south():
     print("You see a locked box. The password is three-digit." \
-          "Hint, calculate the product of the two positive integers in this room.")
-    ans = int(input("Password: "))
-    if answer == 0:
-        print("Sorry, you can't open the box without solving the puzzle. Please do it first.")
-    elif ans == password:
-        print("Corrent password. You open the box and collect Room104 Key.")
-        b.bag.append("Room104 Key")
-    else:
-        print("Wrong password. Please try again.")
+          "Hint: calculate the product of the two positive integers in this room.")
+    while True:
+        ans = int(input("Password: "))
+        if answer == 0:
+            print("Sorry, you can't open the box without solving the puzzle. Please do it first.")
+            break
+        elif ans == password:
+            print("Corrent password. You open the box and collect Room104 Key.")
+            b.bag.append("Room104 Key")
+            break
+        else:
+            print("Wrong password. Please try again.")
+            print("Hint: multiply the number you get from solving the puzzle" \
+                  "and the first three-digit number you see when entering the room.")
 
 def east():
     global answer
@@ -44,8 +50,9 @@ def east():
             print("Sorry, your answer isn't correct. Please do it again.")
 
 def west():
-    if "Room104 Key" in b.bag and "Key Fragment3" in b.bag:
+    if "Room104 Key" in b.bag and "Key Fragment2" in b.bag:
         print("You've found all the items in this room. You may leave the room now.")
+        flag = False
         r.room2()
     else:
         print("Sir, please don't leave the room now. You still have items unfound.")
@@ -54,6 +61,7 @@ def west():
 dir = [north, south, east, west]
 
 def room1():
-    direction = m.move()
-    dir[direction]()
-    
+    while flag:
+        direction = m.move()
+        dir[direction]()
+        

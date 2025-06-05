@@ -8,7 +8,7 @@ flag = True
 def north():
     global flag
     print("That way is the elevator.")
-    if eat:
+    if eat or "UV Torch" not in b.bag:
         print("Please visit other places first before leaving the restuarant in elevator.")
     else:
         while True:

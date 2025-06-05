@@ -1,6 +1,5 @@
 import Move as m
 import Bag as b
-import Restaurant as r
 from tabulate import tabulate
 
 password = "042"
@@ -8,8 +7,8 @@ swim = True
 flag = True
 
 def north():
-    print("That way is closed down for construction, don't go there, you might get hurt.")
-    pass
+    print("You collect the first piece of key fragment. It's the key to escape.")
+    b.bag.append("Key Fragment1")
 
 def south():
     while True:
@@ -45,9 +44,9 @@ def west():
 
         ans = input("Password (type three numbers in the correct order without spaces): ")
         if ans == password:
+            print("Correct password! You may return to the restaurant.")
             swim = False
             flag = False
-            r.Restaurant()
             break
         else:
             print("Wrong password. Please try again.") 
