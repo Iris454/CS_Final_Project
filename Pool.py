@@ -13,7 +13,7 @@ def north():
 def south():
     while True:
         print("Here's a towel basket. Do you want to put one in your bag?")
-        choice = int(input("choice (y/n): "))
+        choice = input("choice (y/n): ")
         if choice == "y":
             b.bag.append("Pool Towel")
             break

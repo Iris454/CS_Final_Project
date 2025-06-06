@@ -1,7 +1,7 @@
 
 descriptions = {"lobby": "A big room with a grand red carpet leading down to the reception desk." \
                 " Classy and sopisticated. It seems perfect at first glance, but with a closer look somthing seems off.",   
-                "pool": "A dull and dark pool area, with beach chairs set along the edge. The stack of unused towels in the corner, "/
+                "pool": "A dull and dark pool area, with beach chairs set along the edge. The stack of unused towels in the corner, " \
                 "gives the sense that somthings wrong. When was the last time this pool was used? ", 
                 "restaurant": "The lights are dim, long shadows across the open space where tables are neatly arranged." \
                         " Each set with folded napkins, polished dishes, and gleaming cutlery, prepared, but untouched." \

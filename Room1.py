@@ -8,11 +8,18 @@ password = 8*103
 flag = True
 
 def north():
-    print("You collect the second key fragment. You are one step closer to escape.")
-    b.bag.append("Key Fragment2")
+    if "Key Fragment2" in b.bag:
+        print("Sorry, you have already collected the second key fragment here. Please visit other places.")
+    else:
+        print("You collect the second key fragment. You are one step closer to escape.")
+        b.bag.append("Key Fragment2")
 
 def south():
-    print("You see a locked box. The password is three-digit." \
+    if "Room104 Key" in b.bag:
+        print("You've opened the box and collected Room104 Key. You don't need to do it again.")
+        return
+    
+    print("You see a locked box. The password is three-digit. \n"
           "Hint: calculate the product of the two positive integers in this room.")
     while True:
         ans = int(input("Password: "))
@@ -50,10 +57,11 @@ def east():
             print("Sorry, your answer isn't correct. Please do it again.")
 
 def west():
+    global flag
     if "Room104 Key" in b.bag and "Key Fragment2" in b.bag:
         print("You've found all the items in this room. You may leave the room now.")
         flag = False
-        r.room2()
+        r.entering()
     else:
         print("Sir, please don't leave the room now. You still have items unfound.")
 

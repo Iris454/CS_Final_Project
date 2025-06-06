@@ -44,7 +44,7 @@ def east():
             elif answer == pw:
                 print("The password is correct!")
                 if len(b.bag) == 0:
-                    print("However, you haven't visited all the areas in the lobby.")
+                    print("Sorry, please check in at the reception desk first before entering the restuarant.")
                 else:
                     print("Now you may visit the restuarant.")
                     flag = False

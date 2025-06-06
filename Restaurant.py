@@ -37,7 +37,7 @@ def east():
         if answer == "Tim":
             print("Yes, you're clever. Now you can go into the pool.")
             eat = False
-            p.Pool()
+            p.pool()
             break
         else:
             print("Wrong.")
