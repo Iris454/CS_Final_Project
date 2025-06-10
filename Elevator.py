@@ -2,10 +2,10 @@ import Bag as b
 import Room1 as r
 
 def elevator():
-    print("Ding! The elevator is here." \
+    print("Ding! The elevator is here. \n"
         "You move up to the second floor.")
-    print("The door is open. You walk out of the elevator. " \
-        "Room103 is right in front of you, but it's locked." \
+    print("The door is open. You walk out of the elevator.  \n" 
+        "Room103 is right in front of you, but it's locked.  \n"
         "What do you do now?")
     while True:
         print("1. go over the items in your bag")

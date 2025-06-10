@@ -32,7 +32,7 @@ def south():
             break
         else:
             print("Wrong password. Please try again.")
-            print("Hint: multiply the number you get from solving the puzzle" \
+            print("Hint: multiply the number you get from solving the puzzle \n"
                   "and the first three-digit number you see when entering the room.")
 
 def east():

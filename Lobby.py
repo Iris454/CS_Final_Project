@@ -61,8 +61,8 @@ def east():
 
 def west():
     global answer
-    print("You see a math question: " \
-    "Two nonnegative numbers have a sum of 21. If the product of one of the numbers " \
+    print("You see a math question: \n" 
+    "Two nonnegative numbers have a sum of 21. If the product of one of the numbers \n" 
     "with the square of the other is to be a maximum, what is this maximum product?")
     answer = int(input("answer: "))
 
