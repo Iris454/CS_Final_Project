@@ -49,6 +49,7 @@ def west():
 dir = [north, south, east, west]
 
 def restaurant():
+    print("Now you are in the restuarant.")
     while flag:
         direction = m.move()
         dir[direction]()

@@ -69,6 +69,7 @@ def west():
 dir = [north, south, east, west]
 
 def room1():
+    print("Now you are in Room 103.")
     while flag:
         direction = m.move()
         dir[direction]()

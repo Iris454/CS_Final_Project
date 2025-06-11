@@ -1,5 +1,7 @@
 # Escape Room Project Proposal
 
+link to the Escape Room Game: https://github.com/Iris454/CS_Final_Project.git 
+
 ### Description:
 For the Final Project, we will be creating an Escape Room Game. The game is set in an isolated hotel in the 1950s, located right next to a cliff. The player will solve math questions and puzzles to collect items/search for hidden items in the rooms that they will need to escape the hotel.
 We will have rooms such as the lobby, pool, elevator, gym, and hotel rooms etc. 
