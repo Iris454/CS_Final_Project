@@ -55,7 +55,8 @@ def west():
 dir = [north, south, east, west]
 
 def pool():
-    print("Now you are in the pool.")
+    print()
+    print("Now you are in the pool ------")
     while flag:
         direction = m.move()
         dir[direction]()

@@ -22,7 +22,9 @@ print("The year is 1957. A storm brews over the Atlantic, and the wind howls lik
         "Out of curiosity, you walk in. \n" 
         "The storm slams the door shut behind you with a thunderous crack. \n" 
         "You try to open the door, but it's locked. \n"
-        "Find a way to escape the Cliffside Hotel. Good luck!")
+        "Find a way to escape the Cliffside Hotel. Good luck! \n")
+
+print("You are in the lobby ------")
 print(descriptions["lobby"])
 l.lobby()
 

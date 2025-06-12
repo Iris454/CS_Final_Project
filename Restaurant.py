@@ -2,8 +2,16 @@ import Move as m
 import Elevator as e
 import Pool as p
 import Bag as b
+import time
+
 eat = True
 flag = True
+
+def countdown(t):
+    while t:
+        time.sleep(1)
+        t -= 1
+
 
 def north():
     global flag
@@ -30,14 +38,26 @@ def south():
 
 def east():
     global eat
+
+    if not eat:
+        print("You have visited the pool. You don't need to go there again.")
+        return
+    
     while True:
         print("That's the pool, to go there you have to solve this tricky riddle!")
         print("Tim's mom has 4 sons, Red, Orange, and Yellow.")
         answer = input("What is the fourth son's name?: ")
         if answer == "Tim":
             print("Yes, you're clever. Now you can go into the pool.")
+            print("Walking ...")
+            countdown(3)
+
             eat = False
             p.pool()
+            
+            print("Walking ...")
+            countdown(3)
+            print("You are back at the restuarant.")
             break
         else:
             print("Wrong.")
@@ -49,7 +69,8 @@ def west():
 dir = [north, south, east, west]
 
 def restaurant():
-    print("Now you are in the restuarant.")
+    print()
+    print("Now you are in the restuarant ------")
     while flag:
         direction = m.move()
         dir[direction]()
