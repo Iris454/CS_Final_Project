@@ -30,7 +30,9 @@ def east():
 
 def west():
     global flag, swim
-    print("Are you hungry, that way is the restaunt.")
+
+    if "Key Fragment1" not in b.bag:
+        print("Sorry, don't return to the restaurant yet. You have something unfound.")
     while True:
         print("To enter you have to pass this puzzle.")
         print("You see a locked box. The password is three-digit.")

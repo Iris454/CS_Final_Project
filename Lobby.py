@@ -2,6 +2,7 @@ import Move as m
 import Bag as b
 import Restaurant as r
 import Map as ma
+import Countdown as c
 
 flag = True
 answer = 0
@@ -26,8 +27,10 @@ def north():
             elif choice == 2 and len(b.bag) != 0:
                 print("Sir, you've already checked in. You don't need to do it again.")
                 break
+            else:
+                print("Please choose 1 or 2.")
         except:
-            print("Please choose 1 or 2. \n")
+            print("Please type a single digit.")
             
 
 
@@ -47,6 +50,8 @@ def east():
                     print("You haven't found the password. Please walk around in the lobby to find it.")
                 elif answer == pw:
                     print("The password is correct! You've mastered the knowledge of CALCULUS!")
+                    print()
+                    c.countdown(2)
                     if len(b.bag) == 0:
                         print("Sorry, please check in at the reception desk first before entering the restuarant.")
                     else:
@@ -59,8 +64,11 @@ def east():
                 break
             elif choice == 2:
                 break
-        except: 
-            print("Please choose 1 or 2. \n")
+            else:
+                print("Please choose 1 or 2.")
+
+        except:
+            print("Please type a single digit.") 
 
 
 def west():
@@ -68,7 +76,12 @@ def west():
     print("You see a math question: \n" 
     "Two nonnegative numbers have a sum of 21. If the product of one of the numbers \n" 
     "with the square of the other is to be a maximum, what is this maximum product?")
-    answer = int(input("answer: "))
+    while True:
+        try:
+            answer = int(input("answer: "))
+            break
+        except:
+            print("Please type a number.")
 
 
 dir = [north, south, east, west]

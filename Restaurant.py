@@ -2,15 +2,10 @@ import Move as m
 import Elevator as e
 import Pool as p
 import Bag as b
-import time
+import Countdown as c
 
 eat = True
 flag = True
-
-def countdown(t):
-    while t:
-        time.sleep(1)
-        t -= 1
 
 
 def north():
@@ -33,6 +28,10 @@ def north():
 
 
 def south():
+    if "UV Torch" in b.bag:
+        print("You've collected the UV Torch.")
+        return
+    
     print("Under a table, you find a purple UV Torch. You collect it.")
     b.bag.append("UV Torch")
 
@@ -43,20 +42,20 @@ def east():
         print("You have visited the pool. You don't need to go there again.")
         return
     
+    print("That's the pool, to go there you have to solve this tricky riddle!")
     while True:
-        print("That's the pool, to go there you have to solve this tricky riddle!")
         print("Tim's mom has 4 sons, Red, Orange, and Yellow.")
         answer = input("What is the fourth son's name?: ")
         if answer == "Tim":
             print("Yes, you're clever. Now you can go into the pool.")
             print("Walking ...")
-            countdown(3)
+            c.countdown(3)
 
             eat = False
             p.pool()
             
             print("Walking ...")
-            countdown(3)
+            c.countdown(3)
             print("You are back at the restuarant.")
             break
         else:
