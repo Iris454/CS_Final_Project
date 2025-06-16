@@ -81,9 +81,10 @@ dir = [north, south, east, west]
 def room1():
     print()
     print("Now you are in Room 103.")
-    print("A faded scent of dust lingers in the air. The wallpaper peels revealing stained walls."\
-    " A flickering ceiling light casts long shadows across the room's furniture." \
+    print("A faded scent of dust lingers in the air. The wallpaper peels revealing stained walls.\n"
+    " A flickering ceiling light casts long shadows across the room's furniture. \n"
     "An unmade bed, a cracked vanity mirror, and a creaky armoire half-open.")
+    print()
     while flag:
         direction = m.move()
         dir[direction]()

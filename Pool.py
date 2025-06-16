@@ -57,13 +57,12 @@ def west():
 dir = [north, south, east, west]
 
 def pool():
-    print("Now you are in the pool.")
-    print("A dull and dark pool area, with beach chairs set along the edge. The stack of unused towels in the corner, "\
-            "gives the sense that somthings wrong. When was the last time this pool was used?")
-
     print()
     print("Now you are in the pool ------")
-
+    print("A dull and dark pool area, with beach chairs set along the edge. The stack of unused towels in the corner, "\
+            "gives the sense that somthings wrong. When was the last time this pool was used?")
+    print()
+    
     while flag:
         direction = m.move()
         dir[direction]()
