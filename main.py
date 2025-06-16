@@ -13,6 +13,5 @@ print("The year is 1957. A storm brews over the Atlantic, and the wind howls lik
         "You try to open the door, but it's locked. \n"
         "Find a way to escape the Cliffside Hotel. Good luck! \n")
 
-print("You are in the lobby ------")
 l.lobby()
 

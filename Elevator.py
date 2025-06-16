@@ -6,9 +6,11 @@ def elevator():
     print()
     c.countdown(2)
     print("Ding! The elevator is here. \n"
-        "You move up to the second floor.")
-    print("The floor creeks of the old elevator, there are only 2 buttons,"\
-          " 1 and 2. Be carefull, it might break down.")
+          "The floor creeks of the old elevator, there are only 2 buttons, \n"
+          "1 and 2. Be carefull, it might break down.")
+    print()
+    print("You move up to the second floor")
+    print()
     print("The door is open. You walk out of the elevator.  \n" 
         "Room103 is right in front of you, but it's locked.  \n"
         "What do you do now?")
