@@ -70,6 +70,8 @@ def west():
 dir = [north, south, east, west]
 
 def lobby():
+    print("A big room with a grand red carpet leading down to the reception desk." \
+            " Classy and sopisticated. It seems perfect at first glance, but with a closer look somthing seems off.")
     while flag:
         direction = m.move()
         dir[direction]()

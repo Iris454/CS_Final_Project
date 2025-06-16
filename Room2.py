@@ -1,6 +1,9 @@
 import Bag as b
 
 def room2():
+    print("The room smells of smoke. A rusted ceiling fan turns slowly above, barely moving the air."\
+            " Yellowed lace curtains hang over a single, cracked window, filtering the dim light from the street outside."\
+            " An old rotary phone sits on the nightstand beside a chipped lamp. The bed is lumpy and uneven, its sheets faded.")
     print("In this room, you only see a locked box with a four-digit password.")
     while True:
         choice = input("What do you do now?: ")
