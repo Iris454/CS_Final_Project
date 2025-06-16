@@ -21,25 +21,30 @@ def south():
     
     print("You see a locked box. The password is three-digit. \n"
           "Hint: calculate the product of the two positive integers in this room.")
+    if answer == 0:
+        print("Sorry, you can't open the box without solving the puzzle. Please do it first.")
+        return
+
     while True:
-        ans = int(input("Password: "))
-        if answer == 0:
-            print("Sorry, you can't open the box without solving the puzzle. Please do it first.")
-            break
-        elif ans == password:
-            print("Corrent password. You open the box and collect Room104 Key.")
-            b.bag.append("Room104 Key")
-            break
-        else:
-            print("Wrong password. Please try again.")
-            print("Hint: multiply the number you get from solving the puzzle \n"
-                  "and the first three-digit number you see when entering the room.")
+        try:
+            ans = int(input("Password: "))
+
+            if ans == password:
+                print("Corrent password. You open the box and collect Room104 Key.")
+                b.bag.append("Room104 Key")
+                break
+            else:
+                print("Wrong password. Please try again.")
+                print("Hint: multiply the number you get from solving the puzzle \n"
+                    "and the first three-digit number you see when entering the room.")
+                
+        except:
+            print("Please type a number.")
 
 def east():
     global answer
     print("You see a sudoku: ")
-    while True:
-        sudoku = [[None, 2, None, None, 8, None, None, 7, None],
+    sudoku = [[None, 2, None, None, 8, None, None, 7, None],
                 [4, 7, None, None, None, 9, None, None, None],
                 [None, None, None, None, None, 5, 5, 2, None],
                 [None, 9, 2, 3, None, None, 1, None, None],
@@ -48,13 +53,18 @@ def east():
                 [7, None, 4, None, None, None, 2, None, 6],
                 [None, None, None, 6, 3, 4, None, None, None],
                 [6, None, None, None, 9, None, None, 5, 3]]
-        print(tabulate(sudoku, tablefmt = "fancy_grid"))
-        answer = int(input("What number does X represent?: "))
-        if answer == pw:
-            print("Hooray! You nailed it.")
-            break
-        else:
-            print("Sorry, your answer isn't correct. Please do it again.")
+    print(tabulate(sudoku, tablefmt = "fancy_grid"))
+
+    while True:
+        try:
+            answer = int(input("What number does X represent?: "))
+            if answer == pw:
+                print("Hooray! You nailed it. You are clever.")
+                break
+            else:
+                print("Sorry, your answer isn't correct. Please do it again.")
+        except: 
+            print("Please type a single digit.")
 
 def west():
     global flag
@@ -69,6 +79,7 @@ def west():
 dir = [north, south, east, west]
 
 def room1():
+    print()
     print("Now you are in Room 103.")
     print("A faded scent of dust lingers in the air. The wallpaper peels revealing stained walls."\
     " A flickering ceiling light casts long shadows across the room's furniture." \

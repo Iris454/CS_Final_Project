@@ -30,7 +30,9 @@ def east():
 
 def west():
     global flag, swim
-    print("Are you hungry, that way is the restaunt.")
+
+    if "Key Fragment1" not in b.bag:
+        print("Sorry, don't return to the restaurant yet. You have something unfound.")
     while True:
         print("To enter you have to pass this puzzle.")
         print("You see a locked box. The password is three-digit.")
@@ -58,6 +60,10 @@ def pool():
     print("Now you are in the pool.")
     print("A dull and dark pool area, with beach chairs set along the edge. The stack of unused towels in the corner, "\
             "gives the sense that somthings wrong. When was the last time this pool was used?")
+
+    print()
+    print("Now you are in the pool ------")
+
     while flag:
         direction = m.move()
         dir[direction]()
