@@ -68,6 +68,11 @@ def west():
 dir = [north, south, east, west]
 
 def restaurant():
+    print("Now you are in the restuarant.")
+    print("The lights are dim, shadows across the open space where tables are neatly arranged." \
+            " Each set with folded napkins, polished dishes, and cutlery, prepared, but untouched." \
+            " A crystal chandelier sways gently in a draft that seems to come from nowhere," \
+            " though not a single window is open. The room is silent.")
     print()
     print("Now you are in the restuarant ------")
     while flag:
