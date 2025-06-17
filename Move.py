@@ -1,5 +1,9 @@
-directions = ["north", "south", "east", "west"]
+directions = ["north", "south", "east", "west"]    # a list of directions
 
+'''
+a move function that asks the player to choose which direction they want to go
+and returns a number between 0 and 4, with each number corresponds to a direction
+'''
 def move():
     print()
     print("Which way do you want to go?")
