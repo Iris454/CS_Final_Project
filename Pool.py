@@ -1,12 +1,16 @@
+# import modules and libraries
 import Move as m
 import Bag as b
 from tabulate import tabulate
 
 password = "042"
-swim = True
 flag = True
 
 def north():
+    if "Key Fragment1" in b.bag:
+        print("You've collected the first piece of key fragment. You don't need to collect again.")
+        return 
+    
     print("You collect the first piece of key fragment. It's the key to escape.")
     b.bag.append("Key Fragment1")
 
@@ -29,7 +33,7 @@ def east():
 
 
 def west():
-    global flag, swim
+    global flag
 
     if "Key Fragment1" not in b.bag:
         print("Sorry, don't return to the restaurant yet. You have something unfound.")
@@ -47,7 +51,6 @@ def west():
         ans = input("Password (type three numbers in the correct order without spaces): ")
         if ans == password:
             print("Correct password! You may return to the restaurant.")
-            swim = False
             flag = False
             break
         else:

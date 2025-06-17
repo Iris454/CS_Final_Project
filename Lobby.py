@@ -1,3 +1,4 @@
+# Import Modules
 import Move as m
 import Bag as b
 import Restaurant as r
@@ -56,7 +57,7 @@ def east():
                         print("Sorry, please check in at the reception desk first before entering the restuarant.")
                     else:
                         print("You may visit the restuarant!")
-                        flag = False
+                        flag = False  # breaks the while loop in the lobby method
                         r.restaurant()
                 else:
                     print("Incorrect password. Please solve the math question again.")
@@ -80,7 +81,7 @@ def west():
         try:
             answer = int(input("answer: "))
             break
-        except:
+        except:  # Catch the error in case the player input is not an integer
             print("Please type a number.")
 
 
@@ -93,7 +94,7 @@ def lobby():
     print("A big room with a grand red carpet leading down to the reception desk. \n" 
             " Classy and sopisticated. It seems perfect at first glance, but with a closer look somthing seems off.")
     print()
-    while flag:
+    while flag: # keep looping until the player enters another room
         direction = m.move()
         dir[direction]()
         
