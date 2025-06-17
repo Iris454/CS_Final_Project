@@ -1,8 +1,18 @@
+#########################################################################
+#Title: Hotel Escape Room Game
+#Assignment: Final Project
+#Class: CS30
+#Date: 6/17/2025
+#Name: Iris and Hargun
+##########################################################################
 
 import Lobby as l
+
+
 name = input("Hi, what's your name! ")
 print(f"Hi {name}! Thank you for playing my Escpae Room Game!")
 
+# Background Story
 print("The year is 1957. A storm brews over the Atlantic, and the wind howls like a warning through the pines. \n"
         "You have arrived at the junction of the city and the mountains to visit a friend. \n" 
         "Suddenly, a building resembling an ancient castle catches your attention. \n"
@@ -13,5 +23,6 @@ print("The year is 1957. A storm brews over the Atlantic, and the wind howls lik
         "You try to open the door, but it's locked. \n"
         "Find a way to escape the Cliffside Hotel. Good luck! \n")
 
+# Call lobby method from Lobby module
 l.lobby()
 

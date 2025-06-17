@@ -1,17 +1,18 @@
+# import modules
 import Move as m
 import Elevator as e
 import Pool as p
 import Bag as b
 import Countdown as c
 
-eat = True
+swim = False
 flag = True
 
 
 def north():
     global flag
     print("That way is the elevator.")
-    if eat or "UV Torch" not in b.bag:
+    if not swim or "UV Torch" not in b.bag: 
         print("Please visit other places first before leaving the restuarant in elevator.")
     else:
         while True:
@@ -28,7 +29,7 @@ def north():
 
 
 def south():
-    if "UV Torch" in b.bag:
+    if "UV Torch" in b.bag: # if already collected the UV Torch, we don't let the player collect it again.
         print("You've collected the UV Torch.")
         return
     
@@ -36,9 +37,9 @@ def south():
     b.bag.append("UV Torch")
 
 def east():
-    global eat
+    global swim
 
-    if not eat:
+    if swim:
         print("You have visited the pool. You don't need to go there again.")
         return
     
@@ -51,7 +52,7 @@ def east():
             print("Walking ...")
             c.countdown(3)
 
-            eat = False
+            swim = True # meaning that the player has visited the pool
             p.pool()
             
             print("Walking ...")

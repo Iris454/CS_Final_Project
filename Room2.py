@@ -16,7 +16,7 @@ def room2():
                 if ans > 0 and ans <= len(b.bag):
                     if b.bag[ans-1] == "UV Torch":
                         print("Using the UV Torch, you see the hidden password: 3421.")
-                        print("Hooray, you get the last piece of key fragment! You escape the hotel!")
+                        print("Hooray, you get the last piece of key fragment! You escape the hotel!") # win!!!
                         print("Thank you for playing my game!")
                         break
                     else:
@@ -26,8 +26,9 @@ def room2():
             break
         else:
             print("Hint: type out the thing that you have along the way.")
-        
 
+
+# a function that requires the player to use Room104 Key in the bag to open the Room104 door
 def entering():
     print("Walking ...")
     c.countdown(2)
