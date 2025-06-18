@@ -1,0 +1,3 @@
+Aurora's Avrage speed: 3841.7727272727275 km/h
+Voyager's Avrage speed: 3704.9424657534246 km/h
+Zenith's Avrage speed: 3772.1171548117154 km/h
