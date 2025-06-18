@@ -35,7 +35,8 @@
 - [ ] Check for errors and modify. (Iris and Hargun)
 
 ## Version History
-
+- v.1: Descriptions and setting in the main module, imported into each room module
+- v.2: Move descriptions and setting into each room function, and overall improvements
 
 ## Timeline
 - May 21: Finish writing the proposal
